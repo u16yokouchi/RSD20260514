@@ -1,0 +1,64 @@
+{
+  "method": "empirical_sigma_rw_from_rater_time_diffs",
+  "criterion": "Contents",
+  "source_csv": "ICNALE GRA Deep Learning.csv",
+  "score_cols": [
+    "Comprehensibility (Content)",
+    "Logicality (Content)",
+    "Sophistication (Content)",
+    "Purposefulness (Content)"
+  ],
+  "score_agg": "mean",
+  "time_target": 10,
+  "time_method": "bin",
+  "T_used": 10,
+  "num_raters_used": 72,
+  "mu_log_sigma_rw": -1.1436245746337599,
+  "sd_log_sigma_rw": 0.2647603669915126,
+  "sd_log_sigma_rw_raw": 0.2647603669915126,
+  "sd_floor": 0.15,
+  "sd_floor_applied": false,
+  "trim": 0.05,
+  "sigma_rw_hat_mean": 0.3294382485720977,
+  "sigma_rw_hat_sd": 0.08318471193944617,
+  "sigma_rw_hat_median": 0.34398218817936316,
+  "sigma_rw_hat_min": 0.16544798647006376,
+  "sigma_rw_hat_max": 0.5563715585516081,
+  "note": "Derived by: (1) standardize scores, (2) remove student means, (3) compute rater×time mean residuals, (4) take adjacent time differences, (5) per-rater SD of diffs as sigma_rw_hat, (6) fit LogNormal to sigma_rw_hat.",
+  "_sigma_rw_prior_source": "empirical",
+  "_meta": {
+    "T_original": 14,
+    "T_after_drop": 14,
+    "time_mapping": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 3,
+      "5": 3,
+      "6": 4,
+      "7": 5,
+      "8": 6,
+      "9": 6,
+      "10": 7,
+      "11": 8,
+      "12": 8,
+      "13": 9,
+      "14": 10
+    },
+    "seed": 123,
+    "min_diffs": 2
+  },
+  "_bootstrap": {
+    "B": 200,
+    "mu_log_sigma_rw_mean": -1.1429687953211762,
+    "mu_log_sigma_rw_ci95": [
+      -1.1984720235832613,
+      -1.081790240297514
+    ],
+    "sd_log_sigma_rw_mean": 0.2617440392200714,
+    "sd_log_sigma_rw_ci95": [
+      0.21922132162718364,
+      0.30669137135827595
+    ]
+  }
+}
